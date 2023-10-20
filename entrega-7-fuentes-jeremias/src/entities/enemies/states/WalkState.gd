@@ -14,6 +14,7 @@ func enter() ->void:
 			rand_range(-wander_radius.y, wander_radius.y)
 		)
 		path = character.pathfinding.get_simple_path(character.global_position, random_target)
+		print(path)
 		if path.empty() || path.size() == 1:
 			emit_signal("finished","idle")
 		else:
